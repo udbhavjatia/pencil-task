@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+
+        <!-- Importing required CSS files  -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!-- Importing fabric.js library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.0.0/fabric.min.js"></script>
+
+        <title>Pencil Task | Udbhav</title>
+    </head>
+
+    <body class='bg-secondary'>
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-light bg-dark">
+            <span class="navbar-brand mb-0 h1 text-white">Image Uploader</span>
+          </nav>
+        <!-- /Navigation Bar -->
+
+        
+        <div class='container mt-5'>
+            <div class='row'>
+                <div class='col-md-3'>
+                </div>
+
+                <!-- Canvas -->
+                <div class = 'col-md-auto bg-light rounded'>
+                    <canvas id="c" width=500 height=500></canvas>
+                </div>
+                <!-- /Canvas -->
+
+                <div class='col-md-3'>
+                </div>
+            </div>
+        </div>
+    
+        
+        <div class='container mt-5'>
+            <div class='row'>
+                <div class='col-md-3'>
+                </div>
+
+                <!-- Image Upload Form -->
+                <div class='col-md-6 pr-5'>
+                    <form action="/upload" method='POST' enctype="multipart/form-data">
+                        <div class="input-group mb-3">
+                            <div class="custom-file">
+                                <input name='photo' type="file" class="custom-file-input" id="imgLoader"/>
+                                <label class="custom-file-label {{textColor}}" for="imgLoader">{{message}}</label>
+                            </div>
+                            <div class="input-group-append">
+                                <button class="btn btn-primary">Upload</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- /Image Upload Form -->
+
+                <div class='col-md-3'>
+                </div>
+            </div>
+        </div>
+
+        <!-- Importing required scripts-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="js/init.js"></script>
+        <script src="js/fileInput.js"></script>
+    </body>
+</html>
