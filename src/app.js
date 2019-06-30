@@ -5,7 +5,7 @@ const hbs = require('hbs');
 const path = require('path');
 
 //Defining the port for app to listen on
-const PORT = 3000;
+const port = process.env.PORT || 3000;
 
 //Defining how the files should be stored in the file system
 const storage = multer.diskStorage({
@@ -81,6 +81,6 @@ app.post('/upload', (req, res) => {
 });
 
 //To make the server live
-app.listen(PORT, () => {
-    console.log('Server is up and running');
+app.listen(port, () => {
+    console.log(`Server is up and running on ${port}`);
 });
