@@ -1,6 +1,6 @@
 //Import required modules
 const express = require('express');
-const multer = require('multer');
+const multer = require('multer'); //Middleware for handling file uploads
 const hbs = require('hbs');
 const path = require('path');
 
@@ -26,9 +26,9 @@ const upload = multer({
         const extname = fileTypes.test(path.extname(file.originalname).toLowerCase());
 
         if (extname) {
-            return cb(null, true);
+            cb(null, true);
         } else {
-            cb('Error: Only Images can be uploaded');
+            cb(new Error('Only images can be uploaded'));
         }
     }
 }).single('photo')
