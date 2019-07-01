@@ -3,6 +3,7 @@ const canvas = new fabric.Canvas('c');
 
 document.getElementById('imgLoader').onchange = function handleImage(e) {
     const reader = new FileReader();
+    
     reader.onload = function (event) {
         const imgObj = new Image();
         imgObj.src = event.target.result;
